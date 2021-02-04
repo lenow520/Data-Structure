@@ -13,7 +13,7 @@
 
 ## :pushpin: Array
 ### *Introduction*  
-![](https://i.imgur.com/wWV7SvV.jpg =70%x)
+![](https://i.imgur.com/wWV7SvV.jpg)
 
 * **Object:** pairs of <index,value>
 * **Operation:** 
