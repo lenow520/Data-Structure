@@ -146,7 +146,7 @@ count the frequencies
 |   e   | 5         |
 
 #### step 2
-use the frequency as key to establish the nodes
+use the frequency as key to establish the nodes  
 ![](https://i.imgur.com/cYfXxyh.png)
 
 #### step 3
