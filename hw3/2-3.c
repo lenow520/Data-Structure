@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*¨Ï¥Îtrie tree
-  1.Âàmorse 2.«Øtrie 3.»¼°j 
-  »¼°j:²Ä¤@­Ómorse¶}©l¨ì²Än­Ómorse¦¨¦r¤§«á, ±qn+1¶}©l©¹¤U»¼°j, §ä¥Xn+1¤§«áªºÁ`¦¸¼Æ«á, ·|Ä~Äò¬Ý1~n+1 1~n+2 .... ¬O§_¦¨¦r 
-*/
-
 char *morse[26] = {".-","-...","-.-.","-..",".","..-.","--.",
 					"....","..",".---","-.-",".-..","--","-.",
 					"---",".--.","--.-",".-.","...","-","..-",
@@ -27,12 +22,12 @@ struct s{
 	long long times;
 };
 
-long long trav(DDT*, s[], int); //int·|Ãz±¼ 
+long long trav(DDT*, s[], int); //cannot use int 
 void push(DDT*, char[]);
 DDT* newNode(char, DDT*);
 
 int len;
-char word_morse[100000][80]; //«Ø¦bheap, ­Y¦bstack·|Ãz±¼ 
+char word_morse[100000][80]; //å»ºåœ¨heap, è‹¥åœ¨stackæœƒçˆ†æŽ‰ 
 
 int main(int argc, char *argv[]) {
 	
@@ -60,7 +55,7 @@ int main(int argc, char *argv[]) {
 		for(l = 0; l < strlen(word)-1; l++){
 			strcat(word_morse[j], morse[(int)word[l]-65]);
 		}
-		if(j == i - 1){ //¤£ª¾¹D¬°Ô£³Ì«á¤@­Ó¦rªº³Ì«á¤@­Ó¦r¤¸·|¸õ¹L¤£°µ, §A¥i¥H§R±¼¸Õ¸Õ¬Ý©ÎÀ°§Údebug 
+		if(j == i - 1){ 
 			strcat(word_morse[j], morse[(int)word[l]-65]);
 		}
 	}
@@ -72,7 +67,7 @@ int main(int argc, char *argv[]) {
 	root->times = 0;
 	
 	DDT *tmp = root;	
-	for(k = 0; k < i; k++){ //«Ø¾ð 
+	for(k = 0; k < i; k++){ 
 		push(root, word_morse[k]);
 	}
 		
@@ -83,7 +78,7 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-void push(DDT* root, char morse[100000]){ //«Øtrie tree 
+void push(DDT* root, char morse[100000]){ //construct trie tree 
 	int i;
 	for(i = 0; i < 100000; i++){
 		if(morse[i] == '.'){
@@ -106,24 +101,23 @@ void push(DDT* root, char morse[100000]){ //«Øtrie tree
 			break;
 		}
 	}
-	root->leaf += 1;  //¥Nªí³o¬qmorse code"¥i¯à¥Nªíªº¦r¦ê+1" 
+	root->leaf += 1; 
 }
 
-// seq[index].times:"³o­ÓÂI«á­±¦¨¦rªº©Ò¦³¥i¯à©Ê" 
 long long trav(DDT* root, s seq[100000], int index){
-	if(index == -1){ //Á×§Kseq[-1], ¦ý®³±¼¦n¹³¤]¨S¦³bug, «á­±³o¨Çif(index)³£¥i¥H®³±¼¶]¬Ý¬Ý 
+	if(index == -1){ 
 		index = 0;
 	}
-	if(seq[index].times != 0){ //dynamic programming, ¤£¬O0¥Nªí³o­ÓÂI¤w¸g¶]¹L¤F, ª½±µ¦^¶Ç 
+	if(seq[index].times != 0){ //dynamic programming
 		return seq[index].times;
 	}
-	if(index == 0){ //¤¾ 
+	if(index == 0){ 
 		index = -1;
 	}
 
 	DDT *tmp = root;
 	int i;
-	for(i = index+1; i < len; i++){ //±q¬YÂI¨ìindex¬°¤î¦³¦¨¦r, ©Ò¥H±qindex+1¶}©l
+	for(i = index+1; i < len; i++){ //exists word
 		//printf("%d ",i);
 		if(seq[i].m == '.'){
 			if(root->dot == NULL){
@@ -141,21 +135,21 @@ long long trav(DDT* root, s seq[100000], int index){
 				root = root->dash;
 			}
 		}
-		if(i == len-1 && root->leaf != 0){ //¨ì¤F¿é¤Jªºmorseªº§ÀºÝ 
-			if(index == -1){ //¤¾ 
+		if(i == len-1 && root->leaf != 0){ //the end of the morse code 
+			if(index == -1){ 
 				index = 0;
 			}
 			seq[index].times += root->leaf;
 			break;
 		}
-		else if(root->leaf != 0 && i != len-1){ //root->leaf¤£¬O0, ¥Nªí³o¬qmorse¦¨¦r 
-			if(index == -1){ //¤¾ 
+		else if(root->leaf != 0 && i != len-1){ //exists a word if root->leaf !=0
+			if(index == -1){  
 				index = 0;
 			}
 			seq[index].times += root->leaf*trav(tmp, seq, i);
 		}
 	}
-	if(index == -1){ //¤¾ 
+	if(index == -1){ //å†— 
 		index = 0;
 	}
 	return seq[index].times;
