@@ -344,7 +344,7 @@ else remove the item at the front queue and return a pointer to it;
 ![](https://i.imgur.com/aEhpTa8.png)
 
 Each node is composed of data & link (i.e. pointer to the next node), so we can use struct to declare nodes in C.
-* create a linked list
+* create a linked list  
 ![](https://i.imgur.com/ycgZxn4.png)
 
 ```
@@ -367,7 +367,7 @@ listPointer create2(){
 
 ```
 
-* insert a node
+* insert a node  
 ![](https://i.imgur.com/dJm9nrv.png)
 ```
 void insert(listPointer * first, listPointer x){
