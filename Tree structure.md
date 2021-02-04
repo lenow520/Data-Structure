@@ -1,4 +1,7 @@
 # Tree 
+
+[![hackmd-github-sync-badge](https://hackmd.io/sW3fRoHCRbicVnQ80OaonA/badge)](https://hackmd.io/sW3fRoHCRbicVnQ80OaonA)
+
 :::info
 * Date: 7/30
 * Highlight: basic concept / binary tree
