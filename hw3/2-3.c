@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	s seq[100000];
 	int j, k, l; 
 	
-	FILE *fp = fopen("test4.txt", "r"); 
+	FILE *fp = fopen("test.txt", "r"); 
 	for(k = 0; k < 100000; k++){
 		seq[k].m = fgetc(fp);
 		seq[k].times = 0;
