@@ -5,7 +5,7 @@
 :::info
 * Date: 7/30
 * Highlight: basic concept / binary tree
-* Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126)  
+* Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126)
 :::
 
 ## k-nary tree
@@ -92,8 +92,10 @@ typedef struct node {
     short int value;
 };
 ```
+
 :bulb: idea
->for (all 2^n possible truth value combinations){
+```
+for (all 2^n possible truth value combinations){
 generate the next combination;   
 replace the variables by their values;  
 evaluate the formula by traversing the tree it points to in postorder;  
@@ -103,9 +105,10 @@ return;
 }
 printf("No satisfiable combination\n");  
 }
-
+```
 
 **evaluation of expression based on postorder traversal**
+
 ```
 void PostOrderEval(treePointer s)
 {
@@ -153,7 +156,7 @@ choose 2 nodes with smallest key, and merge them into a subtree, repeating this 
 ![](https://i.imgur.com/EpvOfXK.png)
 
 #### step 4
-set the leftlink=0, rightlink=1
+set the leftlink=0, rightlink=1  
 ![](https://i.imgur.com/jtKtL1K.png)
 
 |char|Huffman code|char|Huffman code|
