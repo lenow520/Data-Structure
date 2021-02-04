@@ -2,11 +2,10 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/sW3fRoHCRbicVnQ80OaonA/badge)](https://hackmd.io/sW3fRoHCRbicVnQ80OaonA)
 
-:::info
-* Date: 7/30
+
 * Highlight: basic concept / binary tree
 * Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126)
-:::
+
 
 ## k-nary tree
 ***How to define the nodes***:question:  
