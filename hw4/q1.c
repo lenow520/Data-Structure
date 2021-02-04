@@ -51,39 +51,6 @@ void dfs(int start,int n,int flag){
 	}
 }
 
-/*void ans(int start,int n){
-		if(ind[start]==0){printf("%c%c ",V[start].c1,V[start].c2);}
-		if(ind[start]==1){
-			char ref[2];
-			int s,d;
-			for(k=0;k<vex_num;k++){
-				if(k!=i &&(E[k][start].c1 !='*') && (E[k][start].c2 !='*')){
-					ref[0]=E[k][start].c1;
-					ref[1]=E[k][start].c2;
-					s=k; d=start;
-					ans(k,vex_num);
-					break;
-				}
-			}
-			printf("%c%c ( %c%c ) ",ref[0],ref[1],V[s].c1,V[s].c2);
-		}
-		else{
-		int count=2;
-		char ref[2];
-		for(k=0;k<vex_num;k++){
-				if(!count){break;}
-				if(k!=start &&(E[k][start].c1 !='*') && (E[k][start].c2 !='*')){
-					ref[0]=E[k][start].c1;
-					ref[1]=E[k][start].c2;
-					printf("%c%c ( ",ref[0],ref[1]);
-					ans(k,vex_num);
-					count--;
-				}
-			}
-			printf(")\n");
-		}
-		
-}*/
 		
 int main(void){
 	vex_num=eq=0;
@@ -123,13 +90,6 @@ int main(void){
 	}
 	
 	fclose(fp);
-	
-	/*for (i = 0; i < vex_num; i++) {		//print the adjency matrix
-		for (j = 0; j < vex_num; j++) {
-			printf("%c%c ",E[i][j].c1 ,E[i][j].c2);
-		}
-		printf("\n");
-	}*/
 
 	
 	if(self_ref(vex_num)){printf("No solution(self reference).\n");}
