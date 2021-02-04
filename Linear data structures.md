@@ -1,5 +1,8 @@
 # Linear Data Structure
 
+[![hackmd-github-sync-badge](https://hackmd.io/Hz6NL42DTr2ltqxeh24Nfg/badge)](https://hackmd.io/Hz6NL42DTr2ltqxeh24Nfg)
+
+
 :::info
 * Date: 7/16 + 7/23
 * Highlight: Array/Queue/Stack/Linked List
