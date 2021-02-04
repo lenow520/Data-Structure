@@ -139,7 +139,7 @@ int main(void) {
 	fclose(fp);
 //	printf("%d\n",count);
 	
-	//�ϧǱ�arr�إ�nodes[] 
+	//¤Ï§Ç±½arr«Ø¥ßnodes[] 
 	int sum=0,dec=0;
 	for(j=count-1;j>=0;j--){
 		if(arr[j]>=0){
