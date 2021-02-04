@@ -6,7 +6,7 @@
 :::info
 * Date: 7/16 + 7/23
 * Highlight: Array/Queue/Stack/Linked List
-* Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126)
+* Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126 =70%x)
 :::
 
 
