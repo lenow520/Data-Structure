@@ -33,7 +33,7 @@ void trolley(void){
 	platform *ptr=(platform*)malloc(sizeof(platform));
 	ptr=pf[0];
 
-	while(input[j]!='#'){	//Åª¶i¦r¥À ¬Ý¦Û¤v,¥ª,¥kÃäªº¤ë¥x­þ­ÓÂ÷¦r¥À³Ìªñ
+	while(input[j]!='#'){	//è®€é€²å­—æ¯ çœ‹è‡ªå·±,å·¦,å³é‚Šçš„æœˆå°å“ªå€‹é›¢å­—æ¯æœ€è¿‘
 		d=cstshift(ptr->data,input[j]);
 //		printf("%c d=%d\n",input[j],d);
 		l=cstshift(ptr->prev->data,input[j]);
@@ -44,20 +44,20 @@ void trolley(void){
 		m=MIN(abs(d),m);
 		
 		if(m!=abs(d)){
-		if(m==abs(l)+1){	//ptr->prev©Ò»Ý°¾²¾¶q³Ì¤Ö 
+		if(m==abs(l)+1){	//ptr->prevæ‰€éœ€åç§»é‡æœ€å°‘ 
 		ptr=ptr->prev;
 		printf("<");
 		count++;	
 		m=l;
 		}
-		else if(m==abs(r)+1){	//ptr->next©Ò»Ý°¾²¾¶q³Ì¤Ö 
+		else if(m==abs(r)+1){	//ptr->nextæ‰€éœ€åç§»é‡æœ€å°‘ 
 		ptr=ptr->next;
 		printf(">");
 		count++;
 		m=r;	
 		}
 		}
-		else{m=d;}	//ptr©Ò»Ý°¾²¾¶q³Ì¤Ö 
+		else{m=d;}	//ptræ‰€éœ€åç§»é‡æœ€å°‘ 
 		
 		if(m>0){	//plus
 			for(i=0;i<m;i++){
@@ -84,8 +84,8 @@ void trolley(void){
 
 int cstshift(int a,int b){	//compute the least shift needed to the destination
 	int plus,minus;
-	b-=64;	//ªÅ¥Õ¹ïÀ³¨ì0,A¹ïÀ³¨ì1,etc. 
-	a=(a+270)%27;	//platform¥Ø«e¹ïÀ³¨ìªºcity 
+	b-=64;	//ç©ºç™½å°æ‡‰åˆ°0,Aå°æ‡‰åˆ°1,etc. 
+	a=(a+270)%27;	//platformç›®å‰å°æ‡‰åˆ°çš„city 
 	if(b-a>=0){
 	plus= b-a;
 	minus=plus-27;
