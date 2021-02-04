@@ -312,10 +312,10 @@ else remove the item at the front queue and return a pointer to it;
     * regard an array as a **circular queue**   
         * problem: one space is left when queue is full
 
-    front: one position counterclockwise from the first element
-    rear: current end
- ![](https://i.imgur.com/S4A8Le0.png =70%x)
-![](https://i.imgur.com/fXJpYB7.png =65%x)
+    front: one position counterclockwise from the first element  
+    rear: current end  
+ ![](https://i.imgur.com/S4A8Le0.png =70%x)  
+![](https://i.imgur.com/fXJpYB7.png =65%x)  
 ```
     Add(element item){ // add an item to queue
     int newrear=(rear+1)%MaxSize; 
