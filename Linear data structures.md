@@ -12,8 +12,8 @@
 
 
 ## :pushpin: Array
-### *Introduction*
-![](https://i.imgur.com/wWV7SvV.jpg =70%x)
+### *Introduction*  
+![](https://i.imgur.com/wWV7SvV.jpg)
 
 * **Object:** pairs of <index,value>
 * **Operation:** 
@@ -91,8 +91,8 @@ Evaluate poly at f and return the result
 ::
 }
 ```
-* representation 1 (brute force)
-![](https://i.imgur.com/TwH4Run.png =80%x)
+* representation 1 (brute force)  
+![](https://i.imgur.com/TwH4Run.png)  
 ```
 #define MAX_DEGREE 100
 typedef struct{
@@ -101,11 +101,11 @@ typedef struct{
     } polynomial;
 ```
 
-* representation 2
+* representation 2  
 :bulb: idea:  use one global array to store all polynomials 
-    * impractical when all items are nonzero since it requires **twice** as much space as *representation 1*
+    * impractical when all items are nonzero since it requires **twice** as much space as *representation 1*  
     
-![](https://i.imgur.com/Ifvelr2.png =70%x)
+![](https://i.imgur.com/Ifvelr2.png)
 ```
 #define MAX_TERMS 100 //size of the golbal array
 typedef struct{
@@ -154,7 +154,7 @@ else signal an error;
      (1, 1, 11) ====> **<font color=red>(1, 1, 11)</font>**
      Move elements down very often. 
     
-* method 2
+* method 2  
 :bulb: idea: scan the sparse matrix i times to find the elements on column i 
 **for all elements in column j**, place element <i, j, value> in element <j, i, value>.
 ```
@@ -219,7 +219,7 @@ Time Complexity = O(terms)= **O(row * column)** :+1:
 ## :pushpin: Stack & Queue
 ### *Introduction*
 ### Stack
-* a Last-In-First-Out (LIFO) list
+* a Last-In-First-Out (LIFO) list  
 ![](https://i.imgur.com/7NdCXyk.png)
 
 ```
@@ -256,8 +256,8 @@ else remove and return a pointer to the top element of the stack;
 ```
 
 ### Queue
-* a First-In-First-Out (FIFO) list
-![](https://i.imgur.com/CCg7UXz.png =70%x)
+* a First-In-First-Out (FIFO) list  
+![](https://i.imgur.com/CCg7UXz.png)
 
 ```
 class ADTofQueue {
@@ -314,8 +314,9 @@ else remove the item at the front queue and return a pointer to it;
 
     front: one position counterclockwise from the first element  
     rear: current end  
- ![](https://i.imgur.com/S4A8Le0.png =70%x)  
-![](https://i.imgur.com/fXJpYB7.png =65%x)  
+    
+![](https://i.imgur.com/S4A8Le0.png) 
+![](https://i.imgur.com/fXJpYB7.png)   
 ```
     Add(element item){ // add an item to queue
     int newrear=(rear+1)%MaxSize; 
@@ -400,5 +401,3 @@ void delete(listPointer * first, listPointer trail, listPointer x){
 }
 
 ```
-### *Application*
-#### 
