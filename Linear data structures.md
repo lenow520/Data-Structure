@@ -2,12 +2,8 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/Hz6NL42DTr2ltqxeh24Nfg/badge)](https://hackmd.io/Hz6NL42DTr2ltqxeh24Nfg)
 
-
-:::info
-* Date: 7/16 + 7/23
 * Highlight: Array/Queue/Stack/Linked List
 * Reference: [Data structure lectured by Wen-Chih Peng](https://hiskio.com/courses/126)
-:::
 
 
 
